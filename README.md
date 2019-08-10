@@ -41,6 +41,7 @@
   * Single/paired fastq files in .gz format for each sample
   * Filled sample config file, example https://github.com/thinhong/MethPanel/config/sample.Control_23032018_TME.pre.config
   * Filled system config file, example https://github.com/thinhong/MethPanel/config/system.Control_23032018_TME.pre.config
+  * DNA methylation marker panel file, example https://github.com/thinhong/MethPanel/blob/master/config/dna-methylation-marker-panel.bed
   * Note: 
        * The fastq files are located in project/raw/LNCaP/LNCaP_R1.fastq.gz,                                        project/raw/LNCaP/LNCaP_R2.fastq.gz (if paired-end) of each sample.
 
