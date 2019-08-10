@@ -39,14 +39,12 @@
   
 * Inputs require 
   * Single/paired fastq files in .gz format for each sample
-  * Filled sample config file, example https://github.com/luuloi/WGBSX10/blob/master/config/sample.Test_ProstateC.config
-  * Filled system config file, example https://github.com/luuloi/WGBSX10/blob/master/config/system.Test_ProstateC.config
+  * Filled sample config file, example https://github.com/thinhong/MethPanel/config/sample.Control_23032018_TME.pre.config
+  * Filled system config file, example https://github.com/thinhong/MethPanel/config/system.Control_23032018_TME.pre.config
   * Note: 
-       * The fastq files are located in project/raw/LNCaP/lane1/lane1_R1.fastq.gz,                                          project/raw/sample/lane2/lane1_R2.fastq.gz of each sample.
-       * Lane and sample name should not have any dots '.' in it.
+       * The fastq files are located in project/raw/LNCaP/LNCaP_R1.fastq.gz,                                        project/raw/LNCaP/LNCaP_R2.fastq.gz (if paired-end) of each sample.
 
 ## *MethPanel* shinyApp
 <img src="figures/Slide2.PNG" height="500">
 
-
-<img src="figures/1_login.PNG" height="200">
+For further details manual of *MethPanel* shinyApp: https://github.com/thinhong/MethPanel/wiki
