@@ -47,4 +47,4 @@
 ## *MethPanel* shinyApp
 <img src="figures/Slide2.PNG" height="500">
 
-For further details manual of *MethPanel* shinyApp: https://github.com/thinhong/MethPanel/wiki
+For further details manual of *MethPanel* shinyApp: https://github.com/thinhong/MethPanel/wiki/Manual-for-MethPanel-shinyApp
