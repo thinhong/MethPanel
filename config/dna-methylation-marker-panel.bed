@@ -1,0 +1,4 @@
+# The path to amplicon sequecence coordinate in hg18/hg19/hg38
+# chromA  startA     endA       nameA    primerA     
+chr1     23882888   23882928   ID3      P1_ID3      
+chr1     24469272   24469325   IL22RA1  P2_IL22RA1  
