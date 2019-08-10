@@ -3,7 +3,7 @@
 *MethPanel* is a computational pipeline with an interactive graphical interface for rapid analysis multiplex bisulphite PCR sequencing data. The tool covers a complete analysis workflow from genomic alignment to DNA methylation calling and supports an unlimited number of PCR amplicons and input samples. Moreover *MethPanel* offers important and unique features, such as a polymorphism score and a bisulphite PCR bias correction. *MethPanel* can be run in parallel by samples on either a personal computer or a high performance computer, while the outputs are automatically forwarded to a shinyApp for convenient display, visualisation and sharing data across collaborators and clinicians. It means data are centralized, hence easy for storage management.
 
 ## *MethPanel* workflow
-<img src="figures/Slide1.PNG" height="500">
+<img src="figures/workflow.png" height="500">
 
 ### Installation
 * *MethPanel* is built based on in-house bash/python/R script, Bpipe and a collection of software packages:
