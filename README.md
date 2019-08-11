@@ -48,9 +48,13 @@
 ### How to run *MethPanel*
 
 project="prostate_cancer_panel"
+
 sample_config="/path/to/${project}/config/sample.${project}.pre.config"
+
 system_config="/path/to/${project}/config/system.${project}.pre.config"
-* The fastq files are located in /path/to/${project}/raw/
+
+\# The fastq files are located in /path/to/${project}/raw/
+
 python "/path/to/MethPanel/pipe/run_Bpipe.py" $sample_config $system_config
 
 ## *MethPanel* shinyApp
