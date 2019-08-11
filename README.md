@@ -43,7 +43,15 @@
   * Filled system config file, example https://github.com/thinhong/MethPanel/config/system.Control_23032018_TME.pre.config
   * DNA methylation marker panel file, example https://github.com/thinhong/MethPanel/blob/master/config/dna-methylation-marker-panel.bed
   * Note: 
-       * The fastq files are located in project/raw/LNCaP/LNCaP_R1.fastq.gz,                                        project/raw/LNCaP/LNCaP_R2.fastq.gz (if paired-end) of each sample.
+       * The fastq files are located in /path/to/${project}/raw/Sample1/Sample1_R1.fastq.gz,                                        /path/to/${project}/raw/Sample1/Sample1_R2.fastq.gz (if paired-end) of each sample.
+
+### How to run *MethPanel*
+
+project="prostate_cancer_panel"
+sample_config="/path/to/${project}/config/sample.${project}.pre.config"
+system_config="/path/to/${project}/config/system.${project}.pre.config"
+* The fastq files are located in /path/to/${project}/raw/
+python "/path/to/MethPanel/pipe/run_Bpipe.py" $sample_config $system_config
 
 ## *MethPanel* shinyApp
 <img src="figures/Slide2.PNG" height="500">
