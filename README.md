@@ -58,6 +58,6 @@ system_config="/path/to/${project}/config/system.${project}.pre.config"
 python "/path/to/MethPanel/pipe/run_Bpipe.py" $sample_config $system_config
 
 ## *MethPanel* shinyApp
-<img src="figures/Slide2.PNG" height="500">
+<img src="figures/shiny_client.png" height="500">
 
 For further details manual of *MethPanel* shinyApp: https://github.com/thinhong/MethPanel/wiki/Manual-for-MethPanel-shinyApp
