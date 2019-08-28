@@ -60,4 +60,4 @@ python "/path/to/MethPanel/pipe/run_Bpipe.py" $sample_config $system_config
 ## *MethPanel* shinyApp
 <img src="figures/shiny_client.png" height="500">
 
-For further details manual of *MethPanel* shinyApp: https://github.com/thinhong/MethPanel/wiki
+For further details manual of *MethPanel* shinyApp, please visit our [**Wiki page**](https://github.com/thinhong/MethPanel/wiki). 
