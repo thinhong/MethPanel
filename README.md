@@ -1,6 +1,6 @@
 # *MethPanel*
 
-*MethPanel* is a computational pipeline in the Linux operating system with an interactive graphical interface for rapid analysis of multiplex bisulphite PCR sequencing data. The tool covers a complete analysis workflow from genomic alignment to DNA methylation calling and supports an unlimited number of PCR amplicons and input samples. Moreover *MethPanel* offers important and unique features, such as a polymorphism score and a bisulphite PCR bias correction. *MethPanel* can be run in parallel by samples on either a personal computer or a high performance computer. The outputs are automatically forwarded to a shinyApp for convenient display, visualisation and sharing of data across with collaborators and clinicians. It also centralizes data allowing easy storage management.
+*MethPanel* is a computational pipeline in the Linux operating system with an interactive graphical interface for rapid analysis of multiplex bisulphite PCR sequencing data. The tool covers a complete analysis workflow from genomic alignment to DNA methylation calling and supports an unlimited number of PCR amplicons and input samples. Moreover *MethPanel* offers important and unique features, such as a polymorphism score and a bisulphite PCR bias correction. *MethPanel* can be run in parallel by samples on either a personal computer or a high performance computer. The outputs are automatically forwarded to a shinyApp for convenient display, visualisation and sharing of data with collaborators and clinicians. It also centralizes data allowing easy storage management.
 
 ## *MethPanel* workflow
 <img src="figures/full_workflow_ver2.png" height="320">
@@ -37,7 +37,7 @@
   * or
   * git clone https://github.com/thinhong/MethPanel.git
   
-* Inputs require 
+* Inputs required
   * Single/paired fastq files in .gz format for each sample
   * Filled sample config file, example https://github.com/thinhong/MethPanel/config/sample.Control_23032018_TME.pre.config
   * Filled system config file, example https://github.com/thinhong/MethPanel/config/system.Control_23032018_TME.pre.config
@@ -47,7 +47,7 @@
 
 ### How to run *MethPanel*
 
-project="prostate_cancer_panel"
+project="example_panel"
 
 sample_config="/path/to/${project}/config/sample.${project}.pre.config"
 
