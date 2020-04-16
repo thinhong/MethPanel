@@ -30,14 +30,20 @@
       pip install configobj argparse
       ```
     * [R version >= 3.4.0] 
-      * source("https://bioconductor.org/biocLite.R")
-      * biocLite(c("BSgenome.Hsapiens.UCSC.hg19", "rtracklayer", "GenomicRanges")) 
-      * install.packages(c("shiny", "shinyauthr", "shinyjs", "plotly", "ggplot2", "gplots", "reshape2"))
+      ```
+      source("https://bioconductor.org/biocLite.R")
+      biocLite(c("BSgenome.Hsapiens.UCSC.hg19", "rtracklayer", "GenomicRanges")) 
+      install.packages(c("shiny", "shinyauthr", "shinyjs", "plotly", "ggplot2", "gplots", "reshape2"))
+      ```
 
 * Installation
-  * git clone git@github.com:/thinhong/MethPanel.git
+  ```
+  git clone git@github.com:/thinhong/MethPanel.git
+  ```
   * or
-  * git clone https://github.com/thinhong/MethPanel.git
+  ```
+  git clone https://github.com/thinhong/MethPanel.git
+  ```
   
 * Inputs required
   * Single/paired fastq files in .gz format for each sample
@@ -45,20 +51,18 @@
   * Filled system config file, example https://github.com/thinhong/MethPanel/config/system.Control_23032018_TME.pre.config
   * DNA methylation marker panel file, example https://github.com/thinhong/MethPanel/blob/master/config/dna-methylation-marker-panel.bed
   * Note: 
-       * The fastq files are located in /path/to/${project}/raw/Sample1/Sample1_R1.fastq.gz,                                        /path/to/${project}/raw/Sample1/Sample1_R2.fastq.gz (if paired-end) of each sample.
+       * The fastq files are located in `/path/to/${project}/raw/Sample1/Sample1_R1.fastq.gz`,                                        `/path/to/${project}/raw/Sample1/Sample1_R2.fastq.gz` (if paired-end) of each sample.
 
 ### How to run *MethPanel*
-
+```
 project="example_panel"
-
 sample_config="/path/to/${project}/config/sample.${project}.pre.config"
-
 system_config="/path/to/${project}/config/system.${project}.pre.config"
-
-\# The fastq files are located in /path/to/${project}/raw/
-
+```
+\# The fastq files are located in `/path/to/${project}/raw/`
+```
 python "/path/to/MethPanel/pipe/run_Bpipe.py" $sample_config $system_config
-
+```
 ## *MethPanel* shinyApp
 <img src="figures/shiny_ver5.png" height="500">
 
