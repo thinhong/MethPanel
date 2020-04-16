@@ -25,8 +25,10 @@
   
 * Dependencies
   * All the above listed software packages, here are some commands to install python and R packages
-    * [python version >= 2.7.11] 
-      * pip install configobj argparse
+    * [python version >= 2.7.11]
+      ```
+      pip install configobj argparse
+      ```
     * [R version >= 3.4.0] 
       * source("https://bioconductor.org/biocLite.R")
       * biocLite(c("BSgenome.Hsapiens.UCSC.hg19", "rtracklayer", "GenomicRanges")) 
