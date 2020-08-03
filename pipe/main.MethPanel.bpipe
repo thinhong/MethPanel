@@ -1,0 +1,17 @@
+/////////////////////////////////////////////////////////////////////////////////
+//
+// MethPanel: main.MethPanel
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+about title: "MethPanel: Alignment, DNA methylation and polymorphism calling"
+
+// Load the default configuration: path to packages, modules, genome index, CpG coordinates...
+load SYSTEM_CONFIG
+
+// All the core pipeline stages in the pipeline
+load 'stage.MethPanel.bpipe'
+
+run { 
+      indexing + "%_R*.fastq.gz" * [ trim_galore + alignment + methylation_calling + methylation_pattern ] + [ mergeToBigTable , mergeToAmplicon + mergeToBigTableFullRead ] + plot_coverage_methylation + metrics
+}

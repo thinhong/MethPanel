@@ -1,0 +1,88 @@
+// indexing: 
+indexing = {
+	output.dir = "ref/"
+	produce("indexing.txt"){
+			exec """ mkdir -p "$output.dir"; project="$project" build_name="$build_name" panel_name="$panel_name" inAmp="$inAmp" add="$add" REF="$REF" "$BASEDIR/script/index_ref/index_ref.sh" """, "indexing"
+	}
+}
+
+// trim
+trim_galore = {
+	def sample = input.split("/")[1]
+	output.dir = "raw_trimmed/" + sample
+	produce(sample + "_trimmed_R1.fastq.gz"){
+			exec """ mkdir -p "$output.dir"; isSingleEnd="$isSingleEnd" O="$output.dir" R1="$input1" R2="$input2" "$BASEDIR/script/trim_galore/trim_galore.sh" """, "trim_galore"
+	}
+}
+
+// alignment: alignment, remove unconverted reads, sort and index bam file
+alignment = {
+	def sample = input.split("/")[1]
+	output.dir = "aligned/" + sample
+	produce(sample + ".bismark.bam"){
+			exec """ mkdir -p "$output.dir"; isSingleEnd="$isSingleEnd" OUTPUT="$output.dir" REF="$REF" sample="$sample" R1="$input" REMOVE_UNCONVERTED="$REMOVE_UNCONVERTED" NUMBER_C="$NUMBER_C" "$BASEDIR/script/alignment/bismark.sh" """, "alignment"
+	}
+}
+
+// methylation_calling:
+methylation_calling = {
+	def sample = input.split("/")[1]
+	output.dir = "called/" + sample
+	produce(sample + ".bismark.full.tsv", "CpG_context_" + sample + ".bismark.txt"){
+			exec """ mkdir -p "$output.dir"; isSingleEnd="$isSingleEnd" OUTPUT="$output.dir" REF="$REF" sample="$sample" BAM="$input" FRAME="$FRAME" add="$add" "$BASEDIR/script/methylation_calling/bismark_methylation_extractor.sh" """, "methylation_calling"
+	}
+}
+
+// methylation_pattern:
+methylation_pattern = {
+	def sample = input.txt.split("/")[1]
+	output.dir = "patterned/" + sample
+	produce(sample + ".pattern"){
+			exec """ mkdir -p "$output.dir"; OUTPUT="$output.dir" INPUT="$input.txt" sample="$sample" FRAME="$FRAME" AMP="$AMP" "$BASEDIR/script/methylation_pattern/methylation_pattern.sh" """, "methylation_pattern"
+	}
+}
+
+// mergeToAmplicon:
+mergeToAmplicon = {
+	def INPATH = "patterned/"
+	output.dir = "polymorphism/"
+	produce("*.polymorphism"){
+			exec """ OUTPATH="$output.dir" INPATH="$INPATH" AMP="$AMP" "$BASEDIR/script/mergeToAmplicon/mergeToAmplicon.sh" """, "mergeToAmplicon"
+	}
+}
+
+// mergeToBigTable:
+mergeToBigTable = {
+	def INPATH = "called/"
+	output.dir = "bigTable/"
+	produce("bigTable.tsv"){
+			exec """ OUTPATH="$output.dir" INPATH="$INPATH" "$BASEDIR/script/mergeToBigTable/mergeToBigTable.sh" """, "mergeToBigTable"
+	}
+}
+
+// mergeToBigTableFullRead:
+mergeToBigTableFullRead = {
+	def INPATH = "polymorphism/"
+	output.dir = "bigTable/"
+	produce("bigTable_fullRead.tsv", "bigTable_fullRead_polymorphism.tsv"){
+			exec """ OUTPATH="$output.dir" INPATH="$INPATH" "$BASEDIR/script/mergeToBigTableFullRead/mergeToBigTableFullRead.sh" """, "mergeToBigTableFullRead"
+	}
+}
+
+// plot_coverage_methylation:
+plot_coverage_methylation = {
+	def INPATH = "bigTable/"
+	output.dir = "bigTable/"
+	produce("bigTable_filtered.tsv.coverage.heatmap.pdf", "bigTable_filtered.tsv.methylation.heatmap.pdf", "bigTable_fullRead.tsv.coverage.heatmap.pdf", "bigTable_fullRead.tsv.methylation.heatmap.pdf"){
+			exec """ OUTPATH="$output.dir" INPATH="$INPATH" suffix1="_filtered" suffix2="_fullRead" "$BASEDIR/script/plot_coverage_methylation/plot_coverage_methylation.sh" """, "plot_coverage_methylation"
+	}
+}
+
+// metrics:
+metrics = {
+	output.dir = "bigTable/metrics"
+	produce("metrics_table.tsv", "trimmed_matrix.tsv"){
+			exec """ OUTPATH="$output.dir" "$BASEDIR/script/metrics/metrics.sh" """, "metrics"
+	}
+}
+
