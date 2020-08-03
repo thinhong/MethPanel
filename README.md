@@ -7,29 +7,31 @@
 
 ### Installation
 * *MethPanel* is built based on in-house bash/python/R script, Bpipe and a collection of software packages:
-  * [bowtie2, 2.2.5]                   http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
-  * [Bismark, 0.22.1]                  https://www.bioinformatics.babraham.ac.uk/projects/bismark/
-  * [bedtools, 2.26.0]                 https://github.com/arq5x/bedtools2
-  * [R, 3.4.0]
-  * [samtools, 1.3]                    https://github.com/samtools/
-  * [Bpipe, 0.9.9.7]                   https://github.com/ssadedin/bpipe
-  * [fastqc, 0.11.5]                   http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
-  * [trim_galore, 0.5.0]                 https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
-  * [UCSC-format-file-converter, 1.0]  http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/
-  * [ggplot2]                          https://github.com/tidyverse/ggplot2
-  * [BSgenome.Hsapiens.UCSC.version]   https://github.com/Przemol/BSgenome.Hsapiens.UCSC.version
-  * [GenomicRanges]                    https://github.com/Bioconductor-mirror/GenomicRanges
-  * [rtracklayer]                      https://github.com/Bioconductor-mirror/rtracklayer
-  * [python, 2.7.11]
+  * [bowtie2, 2.3.5.1]                   http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
+  * [Bismark, 0.22.1]                    https://www.bioinformatics.babraham.ac.uk/projects/bismark/
+  * [bedtools, 2.28.0]                   https://github.com/arq5x/bedtools2
+  * [R, 3.6.1]                           https://www.r-project.org/
+  * [samtools, 1.9]                      https://github.com/samtools/
+  * [Bpipe, 0.9.9.7]                     https://github.com/ssadedin/bpipe
+  * [fastqc, 0.11.9]                     http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+  * [trim_galore, 0.6.5]                 https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
+  * [UCSC-format-file-converter, 1.0]    http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/
+  * [ggplot2]                            https://github.com/tidyverse/ggplot2
+  * [BSgenome.Hsapiens.UCSC.version]     https://github.com/Przemol/BSgenome.Hsapiens.UCSC.version
+  * [GenomicRanges]                      https://github.com/Bioconductor-mirror/GenomicRanges
+  * [rtracklayer]                        https://github.com/Bioconductor-mirror/rtracklayer
+  * [python, 3.7.4]                      https://www.python.org/
   * [python modules] configobj, argparse
+  * [multiqc]                            https://multiqc.info/
+  * [java, jdk-13.33]                    https://java.com/en/download/
   
 * Dependencies
   * All the above listed software packages, here are some commands to install python and R packages
-    * [python version >= 2.7.11]
+    * [python version >= 3.7.4]
       ```
-      pip install configobj argparse
+      python -m pip install configobj argparse
       ```
-    * [R version >= 3.4.0] 
+    * [R version >= 3.6.1] 
       ```
       source("https://bioconductor.org/biocLite.R")
       biocLite(c("BSgenome.Hsapiens.UCSC.hg19", "rtracklayer", "GenomicRanges")) 
