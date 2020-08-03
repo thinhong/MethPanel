@@ -8,20 +8,20 @@
 ### Installation
 * *MethPanel* is built based on in-house bash/python/R script, Bpipe and a collection of software packages:
   * [bowtie2, 2.3.5.1]                   http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
-  * [Bismark, 0.22.1]                    https://www.bioinformatics.babraham.ac.uk/projects/bismark/
+  * [Bismark, 0.22.3]                    https://www.bioinformatics.babraham.ac.uk/projects/bismark/
   * [bedtools, 2.28.0]                   https://github.com/arq5x/bedtools2
-  * [R, 3.6.1]                           https://www.r-project.org/
   * [samtools, 1.9]                      https://github.com/samtools/
-  * [Bpipe, 0.9.9.7]                     https://github.com/ssadedin/bpipe
+  * [Bpipe, 0.9.9.9]                     https://github.com/ssadedin/bpipe
   * [fastqc, 0.11.9]                     http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
   * [trim_galore, 0.6.5]                 https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
   * [UCSC-format-file-converter, 1.0]    http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/
-  * [ggplot2]                            https://github.com/tidyverse/ggplot2
   * [BSgenome.Hsapiens.UCSC.version]     https://github.com/Przemol/BSgenome.Hsapiens.UCSC.version
   * [GenomicRanges]                      https://github.com/Bioconductor-mirror/GenomicRanges
   * [rtracklayer]                        https://github.com/Bioconductor-mirror/rtracklayer
   * [python, 3.7.4]                      https://www.python.org/
   * [python modules] configobj, argparse
+  * [R, 3.6.1]                           https://www.r-project.org/
+  * [R packages] ggplot2, rtracklayer, Biostrings, data.table, gplots, reshape2, shiny, shinyauthr, shinyjs, plotly
   * [multiqc]                            https://multiqc.info/
   * [java, jdk-13.33]                    https://java.com/en/download/
   
