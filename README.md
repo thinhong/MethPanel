@@ -24,6 +24,7 @@
   * [R packages] ggplot2, rtracklayer, Biostrings, data.table, gplots, reshape2, shiny, shinyauthr, shinyjs, plotly
   * [multiqc]                            https://multiqc.info/
   * [java, jdk-13.33]                    https://java.com/en/download/
+  * [shiny server] Visit our [**Wiki page**](https://github.com/thinhong/MethPanel/wiki/2.-shinyApp-client) for a detailed installation manual of shiny server and shinyapp
   
 * Dependencies
   * All the above listed software packages, here are some commands to install python and R packages
