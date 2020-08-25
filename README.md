@@ -54,17 +54,17 @@
   * Filled system config file, [example](https://raw.githubusercontent.com/thinhong/MethPanel/master/config/system.Example.pre.config)
   * DNA methylation marker panel file, [example](https://raw.githubusercontent.com/thinhong/MethPanel/master/config/amplicons.tsv)
   * Note: 
-       * The fastq files are located in `/path/to/${project}/raw/Sample1/Sample1_R1.fastq.gz`,                                        `/path/to/${project}/raw/Sample1/Sample1_R2.fastq.gz` (if paired-end) for each sample.
+       * The fastq files are located in `/path/to/upstream/analysis/<user>/${project}/raw/Sample1/Sample1_R1.fastq.gz`,                                        `/path/to/upstream/analysis/<user>/${project}/raw/Sample1/Sample1_R2.fastq.gz` (if paired-end) for each sample.
 
 ### How to run *MethPanel*
 ```
-project="example_panel"
-sample_config="/path/to/${project}/config/sample.${project}.pre.config"
-system_config="/path/to/${project}/config/system.${project}.pre.config"
+project="<project_name>"
+sample_config="/path/to/upstream/analysis/<user>/${project}/config/sample.${project}.pre.config"
+system_config="/path/to/upstream/analysis/<user>/${project}/config/system.${project}.pre.config"
 ```
-\# The fastq files are located in `/path/to/${project}/raw/`
+The fastq files are located in `/path/to/${project}/raw/`
 ```
-python "/path/to/MethPanel/pipe/run_Bpipe.py" $sample_config $system_config
+python "/path/to/pipe/run_Bpipe.py" $sample_config $system_config
 ```
 ## *MethPanel* shinyApp
 <img src="https://raw.githubusercontent.com/thinhong/MethPanel/master/figures/shiny_ver5.png" height="500">
