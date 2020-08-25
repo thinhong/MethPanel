@@ -50,9 +50,9 @@
   
 * Inputs required
   * Single/paired fastq files in .gz format for each sample
-  * Filled sample config file, example https://github.com/thinhong/MethPanel/config/sample.Control_23032018_TME.pre.config
-  * Filled system config file, example https://github.com/thinhong/MethPanel/config/system.Control_23032018_TME.pre.config
-  * DNA methylation marker panel file, example https://github.com/thinhong/MethPanel/blob/master/config/dna-methylation-marker-panel.bed
+  * Filled sample config file, [example](https://raw.githubusercontent.com/thinhong/MethPanel/master/config/sample.Example.pre.config)
+  * Filled system config file, [example](https://raw.githubusercontent.com/thinhong/MethPanel/master/config/system.Example.pre.config)
+  * DNA methylation marker panel file, [example](https://raw.githubusercontent.com/thinhong/MethPanel/master/config/amplicons.tsv)
   * Note: 
        * The fastq files are located in `/path/to/${project}/raw/Sample1/Sample1_R1.fastq.gz`,                                        `/path/to/${project}/raw/Sample1/Sample1_R2.fastq.gz` (if paired-end) for each sample.
 
