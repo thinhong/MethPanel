@@ -62,7 +62,7 @@ project="<project_name>"
 sample_config="/path/to/upstream/analysis/<user>/${project}/config/sample.${project}.pre.config"
 system_config="/path/to/upstream/analysis/<user>/${project}/config/system.${project}.pre.config"
 ```
-The fastq files are located in `/path/to/${project}/raw/`
+The fastq files are located in `/path/to/upstream/analysis/<user>/<project_name>/raw/`
 ```
 python "/path/to/pipe/run_Bpipe.py" $sample_config $system_config
 ```
