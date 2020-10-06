@@ -11,7 +11,7 @@ trim_galore = {
 	def sample = input.split("/")[1]
 	output.dir = "raw_trimmed/" + sample
 	produce(sample + "_trimmed_R1.fastq.gz"){
-			exec """ mkdir -p "$output.dir"; isSingleEnd="$isSingleEnd" O="$output.dir" R1="$input1" R2="$input2" "$BASEDIR/script/trim_galore/trim_galore.sh" """, "trim_galore"
+			exec """ mkdir -p "$output.dir"; BASE_QUALITY="$BASE_QUALITY" READ_LENGTH="$READ_LENGTH" isSingleEnd="$isSingleEnd" O="$output.dir" R1="$input1" R2="$input2" "$BASEDIR/script/trim_galore/trim_galore.sh" """, "trim_galore"
 	}
 }
 
