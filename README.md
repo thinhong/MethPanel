@@ -30,12 +30,13 @@
       ```
     * [R version >= 3.6.1] 
       ```
-     install.packages(c("ggplot2", "data.table", "gplots", "reshape2", "shiny", "shinyauthr", "shinyjs", "plotly"))
+      install.packages(c("ggplot2", "data.table", "gplots", "reshape2", "shiny", "shinyauthr", "shinyjs", "plotly"))
+      ```
+      ```
+      if (!requireNamespace("BiocManager", quietly = TRUE))
+      install.packages("BiocManager")
 
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-
-BiocManager::install(c("Biostrings", "GenomicRanges", "rtracklayer"))
+      BiocManager::install(c("Biostrings", "GenomicRanges", "rtracklayer"))
       ```
 
 * Installation
