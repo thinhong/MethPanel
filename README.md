@@ -14,7 +14,6 @@
   * [Bpipe, 0.9.9.9]                     https://github.com/ssadedin/bpipe
   * [fastqc, 0.11.9]                     http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
   * [trim_galore, 0.6.5]                 https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
-  * [UCSC-format-file-converter, 1.0]    http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/
   * [BSgenome.Hsapiens.UCSC.version]     https://github.com/Przemol/BSgenome.Hsapiens.UCSC.version
   * [GenomicRanges]                      https://github.com/Bioconductor-mirror/GenomicRanges
   * [rtracklayer]                        https://github.com/Bioconductor-mirror/rtracklayer
