@@ -26,7 +26,7 @@ Before applying our *MethPanel* workflow, all the primers for the multiplex bisu
   
 * Dependencies
   
-  Download this [**script**](https://raw.githubusercontent.com/thinhong/MethPanel/master/script/install_dependencies.sh) to automatically download all the above listed software packages, install python and R packages, and clone MethPanel github repository. After downloading, execute the command below:
+  Download this [**script**](https://raw.githubusercontent.com/thinhong/MethPanel/master/script/install_dependencies.sh) to automatically download all the above listed software packages, install python and R packages, and clone *MethPanel* github repository. After downloading, execute the command below:
   ```
   bash ./install_dependencies.sh
   ```
@@ -47,7 +47,7 @@ Before applying our *MethPanel* workflow, all the primers for the multiplex bisu
       BiocManager::install(c("Biostrings", "GenomicRanges", "rtracklayer"))
       ```
 
-    * Installation
+    * Clone *MethPanel* github repository
       ```
       git clone git@github.com:/thinhong/MethPanel.git
       ```
