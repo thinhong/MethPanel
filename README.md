@@ -14,13 +14,10 @@
   * [Bpipe, 0.9.9.9]                     https://github.com/ssadedin/bpipe
   * [fastqc, 0.11.9]                     http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
   * [trim_galore, 0.6.5]                 https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
-  * [BSgenome.Hsapiens.UCSC.version]     https://github.com/Przemol/BSgenome.Hsapiens.UCSC.version
-  * [GenomicRanges]                      https://github.com/Bioconductor-mirror/GenomicRanges
-  * [rtracklayer]                        https://github.com/Bioconductor-mirror/rtracklayer
   * [python, 3.7.4]                      https://www.python.org/
   * [python modules] configobj, argparse
   * [R, 3.6.1]                           https://www.r-project.org/
-  * [R packages] ggplot2, rtracklayer, Biostrings, data.table, gplots, reshape2, shiny, shinyauthr, shinyjs, plotly
+  * [R and Bioconductor packages] rtracklayer, Biostrings, GenomicRanges, data.table, ggplot2, gplots, reshape2, shiny, shinyauthr, shinyjs, plotly
   * [multiqc]                            https://multiqc.info/
   * [java, jdk-13.33]                    https://java.com/en/download/
   * [shiny server] Visit our [**Wiki page**](https://github.com/thinhong/MethPanel/wiki/2.-shinyApp-client) for a detailed installation manual of shiny server and shinyapp
@@ -33,9 +30,12 @@
       ```
     * [R version >= 3.6.1] 
       ```
-      source("https://bioconductor.org/biocLite.R")
-      biocLite(c("BSgenome.Hsapiens.UCSC.hg19", "rtracklayer", "GenomicRanges")) 
-      install.packages(c("shiny", "shinyauthr", "shinyjs", "plotly", "ggplot2", "gplots", "reshape2"))
+     install.packages(c("ggplot2", "data.table", "gplots", "reshape2", "shiny", "shinyauthr", "shinyjs", "plotly"))
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install(c("Biostrings", "GenomicRanges", "rtracklayer"))
       ```
 
 * Installation
