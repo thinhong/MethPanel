@@ -2,6 +2,8 @@
 
 *MethPanel* is a computational pipeline in Linux operating system with an interactive graphical interface for rapid analysis of multiplex bisulphite PCR sequencing data. The tool covers a complete analysis workflow from genomic alignment to DNA methylation calling and supports an unlimited number of PCR amplicons and input samples. Moreover *MethPanel* offers important and unique features, such as a polymorphism score and a bisulphite PCR bias correction. *MethPanel* can be run in parallel by samples on either a personal computer or a high performance computer. The outputs are automatically forwarded to a shinyApp for convenient display, visualisation and sharing of data with collaborators and clinicians.
 
+Before applying our *MethPanel* workflow, all the primers for the multiplex bisulphite PCR can be designed using online tool [**PrimerSuite**](http://www.primer-suite.com/) (Lu J, Johnston A, Berichon P, Ru K-l, Korbie D, Trau M: PrimerSuite: a high throughput web-based primer design program for multiplex bisulphite PCR. Scientific reports 2017, 7:41328).
+
 ## *MethPanel* workflow
 <img src="https://raw.githubusercontent.com/thinhong/MethPanel/master/figures/full_workflow_ver5.png" height="320">
 
@@ -23,7 +25,13 @@
   * [shiny server] Visit our [**Wiki page**](https://github.com/thinhong/MethPanel/wiki/2.-shinyApp-client) for a detailed installation manual of shiny server and shinyapp
   
 * Dependencies
-  * All the above listed software packages, here are some commands to install python and R packages
+  
+  Download this [**script**](https://raw.githubusercontent.com/thinhong/MethPanel/master/script/install_dependencies.sh) to automatically download all the above listed software packages, install python and R packages. After downloading, execute the command below:
+  ```
+  bash ./install_dependencies.sh
+  ```
+  
+  Or manually download the above listed software packages, install python and R packages
     * [python version >= 3.7.4]
       ```
       python -m pip install configobj argparse
