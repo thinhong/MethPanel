@@ -75,6 +75,6 @@ The fastq files are located in `/path/to/upstream/analysis/<user>/<project_name>
 python "/path/to/pipe/run_Bpipe.py" $sample_config $system_config
 ```
 ## *MethPanel* shinyApp
-<img src="https://raw.githubusercontent.com/thinhong/MethPanel/master/figures/shiny_ver5.png" height="500">
+<img src="https://raw.githubusercontent.com/thinhong/MethPanel/master/figures/shinyClient.png" height="500">
 
 For further details manual of *MethPanel* shinyApp, please visit our [**Wiki page**](https://github.com/thinhong/MethPanel/wiki). 
