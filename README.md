@@ -5,7 +5,7 @@
 Before applying our *MethPanel* workflow, all the primers for the multiplex bisulphite PCR can be designed using online tool [**PrimerSuite**](http://www.primer-suite.com/) (Lu J, Johnston A, Berichon P, Ru K-l, Korbie D, Trau M: PrimerSuite: a high throughput web-based primer design program for multiplex bisulphite PCR. Scientific reports 2017, 7:41328).
 
 ## *MethPanel* workflow
-<img src="https://raw.githubusercontent.com/thinhong/MethPanel/master/figures/27102020_Figure.png" height="300">
+![](https://raw.githubusercontent.com/thinhong/MethPanel/master/figures/27102020_Figure.png)
 
 ### Installation
 * *MethPanel* is built based on in-house bash/python/R script, Bpipe and a collection of software packages:
